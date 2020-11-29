@@ -1,0 +1,304 @@
+{
+  "customers": [
+    {
+      "name": "Alavés",
+      "projects": [
+        {
+          "name": "Project-Alavés-1",
+          "location": "Alavés-1",
+          "investment": "100M€"
+        },
+        {
+          "name": "Project-Alavés-2",
+          "location": "Alavés-2",
+          "investment": "200M€"
+        }
+      ]
+    },
+    {
+      "name": "Athletic",
+      "projects": [
+        {
+          "name": "Project-Athletic-1",
+          "location": "Athletic-1",
+          "investment": "100M€"
+        },
+        {
+          "name": "Project-Athletic-2",
+          "location": "Athletic-2",
+          "investment": "200M€"
+        }
+      ]
+    },
+    {
+      "name": "Atlético",
+      "projects": [
+        {
+          "name": "Project-Atlético-1",
+          "location": "Atlético-1",
+          "investment": "100M€"
+        },
+        {
+          "name": "Project-Atlético-2",
+          "location": "Atlético-2",
+          "investment": "200M€"
+        }
+      ]
+    },
+    {
+      "name": "Barcelona",
+      "projects": [
+        {
+          "name": "Project-Barcelona-1",
+          "location": "Barcelona-1",
+          "investment": "100M€"
+        },
+        {
+          "name": "Project-Barcelona-2",
+          "location": "Barcelona-2",
+          "investment": "200M€"
+        }
+      ]
+    },
+    {
+      "name": "Betis",
+      "projects": [
+        {
+          "name": "Project-Betis-1",
+          "location": "Betis-1",
+          "investment": "100M€"
+        },
+        {
+          "name": "Project-Betis-2",
+          "location": "Betis-2",
+          "investment": "200M€"
+        }
+      ]
+    },
+    {
+      "name": "Cádiz",
+      "projects": [
+        {
+          "name": "Project-Cádiz-1",
+          "location": "Cádiz-1",
+          "investment": "100M€"
+        },
+        {
+          "name": "Project-Cádiz-2",
+          "location": "Cádiz-2",
+          "investment": "200M€"
+        }
+      ]
+    },
+    {
+      "name": "Celta",
+      "projects": [
+        {
+          "name": "Project-Celta-1",
+          "location": "Celta-1",
+          "investment": "100M€"
+        },
+        {
+          "name": "Project-Celta-2",
+          "location": "Celta-2",
+          "investment": "200M€"
+        }
+      ]
+    },
+    {
+      "name": "Eibar",
+      "projects": [
+        {
+          "name": "Project-Eibar-1",
+          "location": "Eibar-1",
+          "investment": "100M€"
+        },
+        {
+          "name": "Project-Eibar-2",
+          "location": "Eibar-2",
+          "investment": "200M€"
+        }
+      ]
+    },
+    {
+      "name": "Elche",
+      "projects": [
+        {
+          "name": "Project-Elche-1",
+          "location": "Elche-1",
+          "investment": "100M€"
+        },
+        {
+          "name": "Project-Elche-2",
+          "location": "Elche-2",
+          "investment": "200M€"
+        }
+      ]
+    },
+    {
+      "name": "Getafe",
+      "projects": [
+        {
+          "name": "Project-Getafe-1",
+          "location": "Getafe-1",
+          "investment": "100M€"
+        },
+        {
+          "name": "Project-Getafe-2",
+          "location": "Getafe-2",
+          "investment": "200M€"
+        }
+      ]
+    },
+    {
+      "name": "Granada",
+      "projects": [
+        {
+          "name": "Project-Granada-1",
+          "location": "Granada-1",
+          "investment": "100M€"
+        },
+        {
+          "name": "Project-Granada-2",
+          "location": "Granada-2",
+          "investment": "200M€"
+        }
+      ]
+    },
+    {
+      "name": "Huesca",
+      "projects": [
+        {
+          "name": "Project-Huesca-1",
+          "location": "Huesca-1",
+          "investment": "100M€"
+        },
+        {
+          "name": "Project-Huesca-2",
+          "location": "Huesca-2",
+          "investment": "200M€"
+        }
+      ]
+    },
+    {
+      "name": "Levante",
+      "projects": [
+        {
+          "name": "Project-Levante-1",
+          "location": "Levante-1",
+          "investment": "100M€"
+        },
+        {
+          "name": "Project-Levante-2",
+          "location": "Levante-2",
+          "investment": "200M€"
+        }
+      ]
+    },
+    {
+      "name": "Osasuna",
+      "projects": [
+        {
+          "name": "Project-Osasuna-1",
+          "location": "Osasuna-1",
+          "investment": "100M€"
+        },
+        {
+          "name": "Project-Osasuna-2",
+          "location": "Osasuna-2",
+          "investment": "200M€"
+        }
+      ]
+    },
+    {
+      "name": "Real Sociedad",
+      "projects": [
+        {
+          "name": "Project-Real-Sociedad-1",
+          "location": "Real-Sociedad-1",
+          "investment": "100M€"
+        },
+        {
+          "name": "Project-Real-Sociedad-2",
+          "location": "Real-Sociedad-2",
+          "investment": "200M€"
+        }
+      ]
+    },
+    {
+      "name": "Real Madrid",
+      "projects": [
+        {
+          "name": "Project-Real-Madrid-1",
+          "location": "Real-Madrid-1",
+          "investment": "100M€"
+        },
+        {
+          "name": "Project-Real-Madrid-2",
+          "location": "Real-Madrid-2",
+          "investment": "200M€"
+        }
+      ]
+    },
+    {
+      "name": "Real Valladolid",
+      "projects": [
+        {
+          "name": "Project-Real-Valladolid-1",
+          "location": "Real-Valladolid-1",
+          "investment": "100M€"
+        },
+        {
+          "name": "Project-Real-Valladolid-2",
+          "location": "Real-Valladolid-2",
+          "investment": "200M€"
+        }
+      ]
+    },
+    {
+      "name": "Sevilla",
+      "projects": [
+        {
+          "name": "Project-Sevilla-1",
+          "location": "Sevilla-1",
+          "investment": "100M€"
+        },
+        {
+          "name": "Project-Sevilla-2",
+          "location": "Sevilla-2",
+          "investment": "200M€"
+        }
+      ]
+    },
+    {
+      "name": "Valencia",
+      "projects": [
+        {
+          "name": "Project-Valencia-1",
+          "location": "Valencia-1",
+          "investment": "100M€"
+        },
+        {
+          "name": "Project-Valencia-2",
+          "location": "Valencia-2",
+          "investment": "200M€"
+        }
+      ]
+    },
+    {
+      "name": "Villareal",
+      "projects": [
+        {
+          "name": "Project-Villareal-1",
+          "location": "Villareal-1",
+          "investment": "100M€"
+        },
+        {
+          "name": "Project-Villareal-2",
+          "location": "Villareal-2",
+          "investment": "200M€"
+        }
+      ]
+    }
+  ]
+}
