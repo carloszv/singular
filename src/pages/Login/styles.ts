@@ -1,14 +1,5 @@
 import styled from 'styled-components'
 
-export const Outer = styled.div`
-    padding: 0 50px;
-    margin-top: 40;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70vh;
-`
-
 export const Inner = styled.div`
     background: #fff;
     padding: 24;
@@ -19,7 +10,6 @@ export const Inner = styled.div`
     justify-content: center;
     display: flex;
 `
-
 
 export const InputGroup = styled.div`
     width: 100%;
@@ -79,7 +69,7 @@ export const LoginButton = styled.button`
     }
 `
 
-export const RegisterButton = styled.button`
+export const SignupButton = styled.button`
     border: 2px solid blue;
     border-radius: 20px;
     color: blue;

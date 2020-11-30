@@ -1,14 +1,5 @@
 import styled from 'styled-components'
 
-export const Outer = styled.div`
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    margin: 20px 40px;
-`
-
 export const SearchBoxWrapper = styled.div`
     display: flex;
     width: 100%;

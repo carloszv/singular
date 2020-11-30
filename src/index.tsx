@@ -4,13 +4,13 @@ import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 
-import { AuthContext } from 'contexts/auth-context'
+import { AuthProvider } from 'contexts/auth-context'
 
 ReactDOM.render(
   <React.StrictMode>
-    <AuthContext>
+    <AuthProvider>
       <App />
-    </AuthContext>
+    </AuthProvider>
   </React.StrictMode>,
   document.getElementById('root'),
 )

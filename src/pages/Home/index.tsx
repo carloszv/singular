@@ -1,36 +1,112 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { useEffect, useContext, useState } from 'react'
+import React, { useEffect, useState, ChangeEvent, MouseEvent } from 'react'
 import { useHistory } from 'react-router-dom'
-import Table from 'react-bootstrap/Table'
+import { Button, Table } from 'react-bootstrap'
 
-import { Auth } from 'contexts/auth-context'
+import { useAuth } from 'contexts/auth-context'
+import getAllCustomers from 'services/localStorage/getAllCustomers'
+import getCustomerById from 'services/localStorage/getCustomerById'
+import ModalPopup from 'components/elements/ModalPopup/ModalPopup'
 
-import { customers } from './customers.json'
-import { Outer, SearchBoxWrapper, SearchBox } from './styles'
+import { SearchBoxWrapper, SearchBox } from './styles'
 
 export default function Home() {
-  const { user }: any = useContext(Auth)
+  const auth = useAuth()
   const history = useHistory()
-  const [jsonCustomers, setJsonCustomers] = useState(customers)
-  const [searchBox, setSearchBox] = useState('')
+  const allCustomers = getAllCustomers()
 
-  function search(e: string) {
-    setSearchBox(e)
-    e.length === 0
-      ? setJsonCustomers(customers)
-      : setJsonCustomers(customers.filter((customer) => customer.name.toLowerCase().includes(e)))
+  const [state, setState] = useState({
+    customers: allCustomers,
+    searchBox: '',
+    showModal: false,
+    selectedCustomer: {
+      id: '',
+      name: '',
+      projects: [
+        {
+          name: '',
+          location: '',
+          investment: '',
+        },
+      ],
+    },
+  })
+
+  function setShow(value: boolean) {
+    setState((previousState) => ({ ...previousState, showModal: value }))
+  }
+
+  function selectCustomer(e: MouseEvent) {
+    e.preventDefault()
+    const targetId = e.currentTarget.getAttribute('id')
+    const target = getCustomerById(targetId ? targetId : '')
+    if (target) {
+      setState((previousState) => ({ ...previousState, selectedCustomer: target }))
+      setShow(true)
+    }
+  }
+
+  function search(e: ChangeEvent<HTMLInputElement>) {
+    e.preventDefault()
+    const value = e.target.value
+
+    setState((previousState) => ({ ...previousState, searchBox: value }))
+
+    if (value.length === 0) {
+      setState((previousState) => ({ ...previousState, customers: allCustomers }))
+    } else {
+      setState((previousState) => ({
+        ...previousState,
+        customers: state.customers.filter((customer) => customer.name.toLowerCase().includes(value)),
+      }))
+    }
+  }
+
+  function handleNewCustomer(e: MouseEvent) {
+    e.preventDefault()
+
+    const newCustomer = {
+      id: '',
+      name: '',
+      projects: [
+        {
+          name: '',
+          location: '',
+          investment: '',
+        },
+        {
+          name: '',
+          location: '',
+          investment: '',
+        },
+      ],
+    }
+
+    setState((previousState) => ({ ...previousState, selectedCustomer: newCustomer }))
+    setShow(true)
   }
 
   useEffect(() => {
-    if (user === null) {
+    if (auth === null) {
       history.push('/login')
     }
-  }, [history, user])
+  }, [history, auth])
+
+  useEffect(() => {
+    if (!state.showModal) {
+      setState((previousState) => ({ ...previousState, customers: getAllCustomers() }))
+    }
+  }, [state.showModal])
+
+  if (auth === null) {
+    return null
+  }
 
   return (
-    <Outer>
+    <>
+      <ModalPopup show={state.showModal} setShow={setShow} customer={state.selectedCustomer} />
       <SearchBoxWrapper>
-        <SearchBox value={searchBox} onChange={(e) => search(e.target.value)} placeholder="Search by Customer's name" />
+        <SearchBox value={state.searchBox} onChange={search} placeholder="Search by Customer's name" />
       </SearchBoxWrapper>
       <Table striped bordered hover>
         <thead>
@@ -54,16 +130,24 @@ export default function Home() {
           </tr>
         </thead>
         <tbody>
-          {Object.keys(jsonCustomers).map((key: any, pindex: number) => {
+          {Object.keys(state.customers).map((customer: any) => {
             return (
-              <tr>
-                <td>{jsonCustomers[key].name}</td>
-                {jsonCustomers[key].projects.map((project: any, index: number) => {
+              <tr key={state.customers[customer].id} onClick={selectCustomer} id={state.customers[customer].id}>
+                <td>{state.customers[customer].name}</td>
+                {state.customers[customer].projects.map((project: any, index: number) => {
                   return (
                     <>
-                      <td>{project.name}</td>
-                      <td>{project.location}</td>
-                      <td>{project.investment}</td>
+                      <td key={`${state.customers[customer].name}_proyect${index + 1}_name_${project.name}`}>
+                        {project.name}
+                      </td>
+                      <td
+                        key={`${state.customers[customer].name}_proyect${index + 1}_investment_${project.investment}`}
+                      >
+                        {project.location}
+                      </td>
+                      <td key={`${state.customers[customer].name}_proyect${index + 1}_location_${project.location}`}>
+                        {project.investment}
+                      </td>
                     </>
                   )
                 })}
@@ -72,6 +156,9 @@ export default function Home() {
           })}
         </tbody>
       </Table>
-    </Outer>
+      <Button variant="primary" size="lg" active onClick={handleNewCustomer}>
+        Add New Customer
+      </Button>
+    </>
   )
 }

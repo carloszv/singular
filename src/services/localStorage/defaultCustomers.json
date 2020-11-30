@@ -1,0 +1,34 @@
+[
+  {
+    "id": "CUSTOMER_1",
+    "name": "Customer 1",
+    "projects": [
+      {
+        "name": "Project 1",
+        "location": "Location 1",
+        "investment": "100M€"
+      },
+      {
+        "name": "Project 2",
+        "location": "Location 2",
+        "investment": "200M€"
+      }
+    ]
+  },
+  {
+    "id": "CUSTOMER_2",
+    "name": "Customer 2",
+    "projects": [
+      {
+        "name": "Project 3",
+        "location": "Location 3",
+        "investment": "100M€"
+      },
+      {
+        "name": "Project 4",
+        "location": "Location 4",
+        "investment": "200M€"
+      }
+    ]
+  }
+]

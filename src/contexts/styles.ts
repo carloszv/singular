@@ -1,14 +1,5 @@
 import styled from 'styled-components'
 
-export const Outer = styled.div`
-    padding: 0 50px;
-    margin-top: 40;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70vh;
-`
-
 export const Inner = styled.div`
     background: #fff;
     padding: 24;

@@ -1,24 +1,19 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { ReactElement, useContext } from 'react'
-import { useHistory } from 'react-router-dom'
+import React, { ReactElement } from 'react'
 
-import { Auth } from 'contexts/auth-context'
+import { useAuth } from 'contexts/auth-context'
 import { app } from 'services/firebase/firebase'
 
 import { Head, Outer, TopBar, LogoutButton, Logo } from './styles'
 
 export default function Header(): ReactElement {
-  const history = useHistory()
-  const { user }: any = useContext(Auth)
+  const auth = useAuth()
 
   async function logout() {
     await app
       .auth()
       .signOut()
-      .then((result: any) => {
-        console.log(result)
-        history.push('/')
-      })
+      .then()
       .catch((error: any) => {
         console.error(error.message)
       })
@@ -28,7 +23,7 @@ export default function Header(): ReactElement {
     <Head>
       <Outer>
         <TopBar>
-          {user !== null && (
+          {auth !== null && (
             <LogoutButton type="button" onClick={logout}>
               logout
             </LogoutButton>

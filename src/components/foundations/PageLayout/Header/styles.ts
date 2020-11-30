@@ -14,17 +14,25 @@ export const Outer = styled.div`
 `
 
 export const TopBar = styled.div`
-  display: flex;
+  position: fixed;
+  top: 10px;
+  right: 20px;
   align-self: flex-end;
 `
 
 export const LogoutButton = styled.button`
-  color: blue;
-  border: none;
+  color: purple;
+  border: 2px solid purple;
+  border-radius: 20px;
   background-color: transparent;
 
   &:focus {
     outline: none;
+  }
+
+  &:hover {
+    background-color: purple;
+    color: white;
   }
 `
 
