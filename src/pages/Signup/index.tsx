@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState } from 'react'
 import { Form } from 'react-bootstrap'
 import { useHistory } from 'react-router-dom'
@@ -6,7 +7,7 @@ import { app } from 'services/firebase/firebase'
 
 import { Inner, ErrorMessage, InputGroup, Input, ButtonGroupWrapper, LoginButton, SignupButton } from './styles'
 
-export default function Signup({ setSignup }: any) {
+export default function Signup() {
   const history = useHistory()
   const [error, seterror] = useState('')
   const [login, setLogin] = useState(false)
